@@ -19,296 +19,222 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="viewport"
+        content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 
 <body>
     <div class="container">
-        <div class="profile">
-            <h1 class="profile-desc">Not Logged In</h1>
-            <div class="vertical-seperate"></div>
-            <div class="tile-inner profile-picture"></div>
+        <div class="heading">
+            <h1 class="title">2048</h1>
+            <div class="scores-container">
+                <div class="score-container">0</div>
+                <div class="best-container">0</div>
             </div>
-        <hr>
-        <div id="firebaseui-auth2">
-            <h1 class="title2">Login</h1>
-            <div id="firebaseui-auth-container">
-            </div>
-            <div id="loader">Loading...</div>
         </div>
-        <div class="heading2">
-            <h1 class="title2">2048: Custom Mode</h1>
-            <div id="container-above-game2" class="above-game2">
-                <p class="game-intro2">Track your scores, save your progress across devices, and make your own<strong> 2048!</strong></p>
-                <a class="restart-button2">Login</a>
-                <a class="restart-button3">Logout</a>
-            </div>
-    <p class="game-intro2"><strong>You Are Currently Playing: <a class="gameName">Normal 2048</a></strong></p>
-    </div>
-            <hr>
-            <div class="heading">
-                <h1 class="title">2048</h1>
-                <div class="scores-container">
-                    <div class="score-container">0</div>
-                    <div class="best-container">0</div>
+
+        <div class="above-game">
+            <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+            <a class="restart-button">New Game</a>
+            <a class="save-button">Save</a>
+        </div>
+
+        <div class="game-container">
+            <div class="game-message">
+                <p></p>
+                <div class="lower">
+                    <a class="keep-playing-button">Keep going</a>
+                    <a class="retry-button">Try again</a>
                 </div>
             </div>
-
-            <div class="above-game">
-                <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
-                <a class="restart-button">New Game</a>
-                <a class="save-button">Save</a>
+            <div class="login-hide">
+                <div class="lower-hide">
+                    <p class="paused-button"><strong>Game Paused</strong><br><a class="unpause">Unpause</a></p>
+                </div>
             </div>
-
-            <div class="game-container">
-                <div class="game-message">
-                    <p></p>
-                    <div class="lower">
-                        <a class="keep-playing-button">Keep going</a>
-                        <a class="retry-button">Try again</a>
-                    </div>
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
                 </div>
-                 <div class="restore-message">
-                    <div class="restore-hide">
-                        <p>You have already started a game on another device, would you like to continue the old game, or start a new one? <strong>WARNING: You will loose your old game if you start a new one.</strong></p>
-                        <a class="continue-button">Continue</a>
-                        <a class="start-new-button">Start New</a>
-                    </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
                 </div>
-                <div class="login-hide">
-                    <div class="lower-hide">
-                        <p class="paused-button"><strong>Game Paused</strong><br><a class="unpause">Unpause</a></p>
-                    </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
                 </div>
-                <div class="grid-container">
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                    <div class="grid-row">
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                        <div class="grid-cell"></div>
-                    </div>
-                </div>
-
-                <div class="tile-container">
-
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
                 </div>
             </div>
 
-            <p class="game-explanation">
-                <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same picture touch, they <strong>merge into one!</strong>
-            </p>
-            <hr>
-            <p>
-                <strong class="important">Note:</strong> This is a 2048 version I edited to display images instead of number cells as in the original one.
-                <br /> You can change images in the /img/ folder to custom yours.
-            </p>
-            <hr>
-            <p>
-                Edited by <a href="http://github.com/cdivry">Clément DIVRY</a> to make this game use pictures.
-                <br /> Forked from a <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli</a> project hosted <a href="http://github.com/gabrielecirulli/2048">here</a>, Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
-            </p>
-            <hr>
+            <div class="tile-container">
+
+            </div>
+        </div>
+        <hr>
         <h1>Tile Key</h1>
-        <p>This is a key that shows you which images represent specific numbers in 2048, it updates when you change the game.</p>
-        <p><strong>Tile #2</strong></p><div class="tile-inner2"></div>
+        <p>This is a key that shows you which images represent specific numbers in 2048, it updates when you change the
+            game.</p>
+        <p><strong>Tile #2</strong></p>
+        <div class="tile-inner2"></div>
         <br>
-        <p><strong>Tile #4</strong></p><div class="tile-inner4"></div>
+        <p><strong>Tile #4</strong></p>
+        <div class="tile-inner4"></div>
         <br>
-        <p><strong>Tile #8</strong></p><div class="tile-inner8"></div>
+        <p><strong>Tile #8</strong></p>
+        <div class="tile-inner8"></div>
         <br>
-        <p><strong>Tile #16</strong></p><div class="tile-inner16"></div>
+        <p><strong>Tile #16</strong></p>
+        <div class="tile-inner16"></div>
         <br>
-        <p><strong>Tile #32</strong></p><div class="tile-inner32"></div>
+        <p><strong>Tile #32</strong></p>
+        <div class="tile-inner32"></div>
         <br>
-        <p><strong>Tile #64</strong></p><div class="tile-inner64"></div>
+        <p><strong>Tile #64</strong></p>
+        <div class="tile-inner64"></div>
         <br>
-        <p><strong>Tile #128</strong></p><div class="tile-inner128"></div>
+        <p><strong>Tile #128</strong></p>
+        <div class="tile-inner128"></div>
         <br>
-        <p><strong>Tile #256</strong></p><div class="tile-inner256"></div>
+        <p><strong>Tile #256</strong></p>
+        <div class="tile-inner256"></div>
         <br>
-        <p><strong>Tile #512</strong></p><div class="tile-inner512"></div>
+        <p><strong>Tile #512</strong></p>
+        <div class="tile-inner512"></div>
         <br>
-        <p><strong>Tile #1024</strong></p><div class="tile-inner1024"></div>
+        <p><strong>Tile #1024</strong></p>
+        <div class="tile-inner1024"></div>
         <br>
-        <p><strong>Tile #2048</strong></p><div class="tile-inner2048"></div>
+        <p><strong>Tile #2048</strong></p>
+        <div class="tile-inner2048"></div>
         <hr>
-            <h1> Change Images </h1>
         <div class="saved-games"></div>
-            <div class="sam game-explanation container-flex">
-                <br>
-                <p> Image for 2 </p>
-                <textarea class='input2' placeholder='www.starwars.com/darkvader.png'></textarea>
-                <br>
-                <p> Image for 4 </p>
-                <textarea class='input4' placeholder='www.starwars.com/lukeskywalker.png'></textarea>
-                <br>
-                <p> Image for 8 </p>
-                <textarea class='input8' placeholder='www.starwars.com/yoda.png'></textarea>
-                <br>
-                <p> Image for 16 </p>
-                <textarea class='input16' placeholder='www.starwars.com/samtheevil.png'></textarea>
-                <br>
-                <p> Image for 32 </p>
-                <textarea class='input32' placeholder='www.starwars.com/aidanthehacker.png'></textarea>
-                <br>
-                <p> Image for 64 </p>
-                <textarea class='input64' placeholder='www.starwars.com/urmom.png'></textarea>
-                <br>
-                <p> Image for 128 </p>
-                <textarea class='input128' placeholder='www.starwars.com/urdad.png'></textarea>
-                <br>
-                <p> Image for 256 </p>
-                <textarea class='input256' placeholder='www.starwars.com/ursister1.png'></textarea>
-                <br>
-                <p> Image for 512 </p>
-                <textarea class='input512' placeholder='www.starwars.com/ursister2.png'></textarea>
-                <br>
-                <p> Image for 1024 </p>
-                <textarea class='input1024' placeholder='www.starwars.com/urbrother1.png'></textarea>
-                <br>
-                <p> Image for 2048 </p>
-                <textarea class='input2048' placeholder='www.starwars.com/urbrother2_aidan_ur_awesome_sam_keep_doing_you.png'></textarea>
-                <br>
-                <p>Name this Game</p>
-                <textarea class='nameGame' placeholder='star wars game'></textarea>
-                <br>
-                <a class="go">Submit</a>
-                <br>
-                <br>
-            </div>
-        </div>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
-        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
 
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyAUwZv6XXMjz3pH-RCpvrmS4zsVY2yRVTk",
-                authDomain: "github-thing-85048.firebaseapp.com",
-                databaseURL: "https://github-thing-85048.firebaseio.com",
-                projectId: "github-thing-85048",
-                storageBucket: "github-thing-85048.appspot.com",
-                messagingSenderId: "443195271357",
-                appId: "1:443195271357:web:55a238fe25cb0a7b"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-.then(function() {
-})
-.catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-});
-            // Initialize the FirebaseUI Widget using Firebase.
-            var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-            ui.start('#firebaseui-auth-container', {
-                signInOptions: [
-                    firebase.auth.EmailAuthProvider.PROVIDER_ID
-                ],
-                // Other config options...
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAUwZv6XXMjz3pH-RCpvrmS4zsVY2yRVTk",
+            authDomain: "github-thing-85048.firebaseapp.com",
+            databaseURL: "https://github-thing-85048.firebaseio.com",
+            projectId: "github-thing-85048",
+            storageBucket: "github-thing-85048.appspot.com",
+            messagingSenderId: "443195271357",
+            appId: "1:443195271357:web:55a238fe25cb0a7b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+            .then(function () {
+            })
+            .catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
             });
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-            ui.start('#firebaseui-auth-container', {
-                signInOptions: [
-                    // List of OAuth providers supported.
-                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                ],
-                // Other config options...
-            });
+        ui.start('#firebaseui-auth-container', {
+            signInOptions: [
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Other config options...
+        });
 
-            ui.start('#firebaseui-auth-container', {
-                signInOptions: [
-                    firebase.auth.PhoneAuthProvider.PROVIDER_ID
-                ],
-                // Other config options...
-            });
+        ui.start('#firebaseui-auth-container', {
+            signInOptions: [
+                // List of OAuth providers supported.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            ],
+            // Other config options...
+        });
 
-            var uiConfig = {
-                callbacks: {
-                    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-                        // User successfully signed in.
-                        // Return type determines whether we continue the redirect automatically
-                        // or whether we leave that to developer to handle.
-                        return false;
-                    },
-                    uiShown: function() {
-                        // The widget is rendered.
-                        // Hide the loader.
-                        document.getElementById('loader').style.display = 'none';
-                    }
+        ui.start('#firebaseui-auth-container', {
+            signInOptions: [
+                firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Other config options...
+        });
+
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return false;
                 },
-                // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-                signInFlow: 'popup',
-                signInSuccessUrl: 'https://aidanspeakss.github.io/makeurown/#',
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: 'https://aidanspeakss.github.io/makeurown/#',
 
-                signInOptions: [
-                    // Leave the lines as is for the providers you want to offer your users.
-                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                    firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                    firebase.auth.PhoneAuthProvider.PROVIDER_ID
-                ],
-                // Terms of service url.
-                tosUrl: 'https://aidanspeakss.github.io/makeurown/tos.html',
-                // Privacy policy url.
-                privacyPolicyUrl: 'https://aidanspeakss.github.io/makeurown/privacy.html'
-            };
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: 'https://aidanspeakss.github.io/makeurown/tos.html',
+            // Privacy policy url.
+            privacyPolicyUrl: 'https://aidanspeakss.github.io/makeurown/privacy.html'
+        };
 
-            // The start method will wait until the DOM is loaded.
-            ui.start('#firebaseui-auth-container', uiConfig);
-        </script>
-        <script>
-            firebase.initializeApp({
-                apiKey: 'AIzaSyAUwZv6XXMjz3pH-RCpvrmS4zsVY2yRVTk',
-                authDomain: 'github-thing-85048.firebaseapp.com',
-                projectId: 'github-thing-85048',
-            }, "firestore");
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+    <script>
+        firebase.initializeApp({
+            apiKey: 'AIzaSyAUwZv6XXMjz3pH-RCpvrmS4zsVY2yRVTk',
+            authDomain: 'github-thing-85048.firebaseapp.com',
+            projectId: 'github-thing-85048',
+        }, "firestore");
 
-            var db = firebase.firestore();
-        </script>
+        var db = firebase.firestore();
+    </script>
 
-        <script>
-        </script>
-        <script src="js/change.js"></script>
-        <script src="js/bind_polyfill.js"></script>
-        <script src="js/classlist_polyfill.js"></script>
-        <script src="js/animframe_polyfill.js"></script>
-        <script src="js/keyboard_input_manager.js"></script>
-        <script src="js/html_actuator.js"></script>
-        <script src="js/grid.js"></script>
-        <script src="js/tile.js"></script>
-        <script src="js/local_storage_manager.js"></script>
-        <script src="js/game_manager.js"></script>
-        <script src="js/application.js"></script>
+    <script>
+    </script>
+    <script src="js/change.js"></script>
+    <script src="js/bind_polyfill.js"></script>
+    <script src="js/classlist_polyfill.js"></script>
+    <script src="js/animframe_polyfill.js"></script>
+    <script src="js/keyboard_input_manager.js"></script>
+    <script src="js/html_actuator.js"></script>
+    <script src="js/grid.js"></script>
+    <script src="js/tile.js"></script>
+    <script src="js/local_storage_manager.js"></script>
+    <script src="js/game_manager.js"></script>
+    <script src="js/application.js"></script>
 </body>
 
 </html>
