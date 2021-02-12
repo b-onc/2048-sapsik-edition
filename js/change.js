@@ -309,7 +309,8 @@ if (getCookie("images_changed") == "true") {
     var no1024 = getCookie("game1024");
     var no2048 = getCookie("game2048");
     var nameing = getCookie("gameName");
-    addStyleString('  .tile-inner2 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2 + '"); }');
+    addStyleString('  .tile-inner2-a { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2 + '"); }');
+    addStyleString('  .tile-inner2-b { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2 + '"); }');
     addStyleString('  .tile-inner4 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no4 + '"); }');
     addStyleString('  .tile-inner8 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no8 + '"); }');
     addStyleString('  .tile-inner16 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no16 + '"); }');
@@ -320,7 +321,8 @@ if (getCookie("images_changed") == "true") {
     addStyleString('  .tile-inner512 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no512 + '"); }');
     addStyleString('  .tile-inner1024 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no1024 + '"); }');
     addStyleString('  .tile-inner2048 { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2048 + '"); }');
-    addStyleString('  .tile.tile-2 .tile-inner { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2 + '"); }');
+    addStyleString('  .tile.tile-2-a .tile-inner { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2 + '"); }');
+    addStyleString('  .tile.tile-2-b .tile-inner { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no2 + '"); }');
     addStyleString('  .tile.tile-4 .tile-inner { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no4 + '"); }');
     addStyleString('  .tile.tile-8 .tile-inner { background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no8 + '"); }');
     addStyleString('  .tile.tile-16 .tile-inner { background-size: cover; background-repeat: no-repeat; background-position: center center; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("' + no16 + '"); }');

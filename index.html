@@ -4,7 +4,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <meta charset="utf-8">
-    <title>2048: Custom Mode</title>
+    <title>Ben Askimi En Cok Severim Oyunu</title>
     <link href="style/main.css" rel="stylesheet" type="text/css">
     <link rel="apple-touch-icon" sizes="180x180" href="/makeurown/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/makeurown/icon/favicon-32x32.png">
@@ -26,7 +26,7 @@
 <body>
     <div class="container">
         <div class="heading">
-            <h1 class="title">2048</h1>
+            <h1 class="title">Hug your Sapsik!</h1>
             <div class="scores-container">
                 <div class="score-container">0</div>
                 <div class="best-container">0</div>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="above-game">
-            <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+            <p class="game-intro">Let Sapsiks hug and continue their story!</p>
             <a class="restart-button">New Game</a>
             <a class="save-button">Save</a>
         </div>
@@ -83,144 +83,10 @@
 
             </div>
         </div>
-        <hr>
-        <h1>Tile Key</h1>
-        <p>This is a key that shows you which images represent specific numbers in 2048, it updates when you change the
-            game.</p>
-        <p><strong>Tile #2</strong></p>
-        <div class="tile-inner2"></div>
-        <br>
-        <p><strong>Tile #4</strong></p>
-        <div class="tile-inner4"></div>
-        <br>
-        <p><strong>Tile #8</strong></p>
-        <div class="tile-inner8"></div>
-        <br>
-        <p><strong>Tile #16</strong></p>
-        <div class="tile-inner16"></div>
-        <br>
-        <p><strong>Tile #32</strong></p>
-        <div class="tile-inner32"></div>
-        <br>
-        <p><strong>Tile #64</strong></p>
-        <div class="tile-inner64"></div>
-        <br>
-        <p><strong>Tile #128</strong></p>
-        <div class="tile-inner128"></div>
-        <br>
-        <p><strong>Tile #256</strong></p>
-        <div class="tile-inner256"></div>
-        <br>
-        <p><strong>Tile #512</strong></p>
-        <div class="tile-inner512"></div>
-        <br>
-        <p><strong>Tile #1024</strong></p>
-        <div class="tile-inner1024"></div>
-        <br>
-        <p><strong>Tile #2048</strong></p>
-        <div class="tile-inner2048"></div>
-        <hr>
         <div class="saved-games"></div>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyAUwZv6XXMjz3pH-RCpvrmS4zsVY2yRVTk",
-            authDomain: "github-thing-85048.firebaseapp.com",
-            databaseURL: "https://github-thing-85048.firebaseio.com",
-            projectId: "github-thing-85048",
-            storageBucket: "github-thing-85048.appspot.com",
-            messagingSenderId: "443195271357",
-            appId: "1:443195271357:web:55a238fe25cb0a7b"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
-            .then(function () {
-            })
-            .catch(function (error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-            });
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-        ui.start('#firebaseui-auth-container', {
-            signInOptions: [
-                firebase.auth.EmailAuthProvider.PROVIDER_ID
-            ],
-            // Other config options...
-        });
-
-        ui.start('#firebaseui-auth-container', {
-            signInOptions: [
-                // List of OAuth providers supported.
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            ],
-            // Other config options...
-        });
-
-        ui.start('#firebaseui-auth-container', {
-            signInOptions: [
-                firebase.auth.PhoneAuthProvider.PROVIDER_ID
-            ],
-            // Other config options...
-        });
-
-        var uiConfig = {
-            callbacks: {
-                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-                    // User successfully signed in.
-                    // Return type determines whether we continue the redirect automatically
-                    // or whether we leave that to developer to handle.
-                    return false;
-                },
-                uiShown: function () {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
-                }
-            },
-            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-            signInFlow: 'popup',
-            signInSuccessUrl: 'https://aidanspeakss.github.io/makeurown/#',
-
-            signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                firebase.auth.PhoneAuthProvider.PROVIDER_ID
-            ],
-            // Terms of service url.
-            tosUrl: 'https://aidanspeakss.github.io/makeurown/tos.html',
-            // Privacy policy url.
-            privacyPolicyUrl: 'https://aidanspeakss.github.io/makeurown/privacy.html'
-        };
-
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-    <script>
-        firebase.initializeApp({
-            apiKey: 'AIzaSyAUwZv6XXMjz3pH-RCpvrmS4zsVY2yRVTk',
-            authDomain: 'github-thing-85048.firebaseapp.com',
-            projectId: 'github-thing-85048',
-        }, "firestore");
-
-        var db = firebase.firestore();
-    </script>
 
     <script>
     </script>

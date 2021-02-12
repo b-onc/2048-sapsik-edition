@@ -7,7 +7,7 @@
 .gameName {
   margin: 0;
   padding: 0;
-  color: #776e65;
+  color: #ff8000;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   font-style: italic;
@@ -15,11 +15,11 @@
 }
 .go {
   display: inline-block;
-  background: #8f7a66;
+  background: #48ff00;
   border-radius: 3px;
   padding: 0px 20px;
   text-decoration: none;
-  color: #f9f6f2;
+  color: #00ffdd;
   margin: 9px 9px 9px 9px;
   height: 40px;
   line-height: 42px;
@@ -265,8 +265,8 @@ textarea {
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
-  color: #776e65;
+  background: #7d0096;
+  color: #cccccc;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
 
@@ -610,12 +610,18 @@ hr {
     font-weight: bold;
     z-index: 10;
     font-size: 0px; }
-  .tile.tile-2 .tile-inner, .tile-inner2 {
-    background-image: url('../img/2.png');
+  .tile.tile-2-a .tile-inner, .tile-inner2-a {
+    background-image: url('../img/2-a.png');
     background-repeat: no-repeat;
     background-size: contain; 
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
- }
+  }
+  .tile.tile-2-b .tile-inner, .tile-inner2-b {
+  background-image: url('../img/2-b.png');
+  background-repeat: no-repeat;
+  background-size: contain; 
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+  }
   .tile.tile-4 .tile-inner, .tile-inner4 {
     background-image: url('../img/4.png');
     background-repeat: no-repeat;
