@@ -1,11 +1,11 @@
-function Tile(position, value) {
+function Tile(position, value, variant) {
   this.x                = position.x;
   this.y                = position.y;
   this.value            = value || 2;
 
   this.previousPosition = null;
   this.mergedFrom       = null; // Tracks tiles that merged together
-  this.variant          = (Math.random() > 0.5 ? "a" : "b");
+  this.variant          = variant;
 }
 
 Tile.prototype.savePosition = function () {
